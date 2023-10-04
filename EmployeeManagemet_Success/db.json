@@ -1,0 +1,94 @@
+{
+  "employees": [
+    {
+      "firstName": "Myname",
+      "lastName": "Lastname",
+      "email": "abd@gmail.com",
+      "contact": "8948597973",
+      "dob": "2023-09-30",
+      "address": "rthksqj",
+      "id": 1
+    },
+    {
+      "firstName": "Nitin",
+      "lastName": "Kesher",
+      "email": "kesh.nitin@gnail.com",
+      "contact": "8948597973",
+      "dob": "2023-09-02",
+      "address": "Virar",
+      "id": 2
+    },
+    {
+      "firstName": "Nitinesh",
+      "lastName": "Kesher",
+      "email": "kesh.nitin@gnail.com",
+      "contact": "7610002345",
+      "dob": "2023-09-01",
+      "address": "Virar",
+      "id": 3
+    },
+    {
+      "firstName": "News",
+      "lastName": "Times",
+      "email": "24by7@net.in",
+      "contact": "8948597973",
+      "dob": "2023-09-10",
+      "address": "Thane",
+      "id": 4
+    },
+    {
+      "firstName": "Nitin",
+      "lastName": "Kesher",
+      "email": "kesh.nitin@gnail.com",
+      "contact": "9868686990",
+      "dob": "2023-09-30",
+      "address": "Virar",
+      "id": 6
+    },
+    {
+      "firstName": "Neil",
+      "lastName": "Armstrong",
+      "email": "neil.arm@mail.com",
+      "contact": "9867609098",
+      "dob": "2023-09-02",
+      "address": "CST",
+      "id": 7
+    },
+    {
+      "firstName": "Mind",
+      "lastName": "Craft",
+      "email": "mindcraft@mail.com",
+      "contact": "8090102030",
+      "dob": "2023-08-31",
+      "address": "JB Nagar",
+      "id": 8
+    },
+    {
+      "firstName": "Myname",
+      "lastName": "Lastname",
+      "email": "abd@gmail.com",
+      "contact": "8090102030",
+      "dob": "2023-09-29",
+      "address": "rthksqj",
+      "id": 9
+    },
+    {
+      "firstName": "Maha",
+      "lastName": "Khumbh",
+      "email": "mahakumbh@mail.com",
+      "contact": "6590004568",
+      "dob": "",
+      "address": "Lucknow",
+      "id": 10
+    },
+    {
+      "firstName": "Andheri",
+      "lastName": "Kurla",
+      "email": "andheri@mum.in",
+      "contact": "8090102030",
+      "dob": "2023-09-14",
+      "address": "Mumbai",
+      "id": 11
+    }
+  ]
+}

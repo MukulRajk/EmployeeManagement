@@ -1,0 +1,18 @@
+
+{
+  "users":
+[
+    {
+      "firstName": "John",
+      "dob": "1990-01-01"
+      
+    },
+
+    {
+      "firstName" : "Jayesh",
+      "dob"   : "2023-01-01"
+    }
+   
+  ]
+}
+  

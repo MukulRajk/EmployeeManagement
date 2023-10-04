@@ -1,0 +1,256 @@
+<!-- employee.component.html -->
+
+<form>
+  <div class="container">
+    <div class="left-section" style="text-align: left;">
+<!-- Content for the left section goes here -------------------- -->
+
+        <div class="container">
+            <h2 style="color: darkgreen;">Employee Form</h2>
+            <main></main>
+            <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+              <table>
+              <!-- First Name -->
+  <div class="form-group">
+        <label for="firstName">First Name</label>
+    <br/>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          formControlName="firstName" />
+          
+      <div
+        *ngIf="employeeForm.get('firstName')?.hasError('required') &&
+                employeeForm.get('firstName')?.touched"
+        class="text-danger"
+      >
+        First Name is required.
+      </div>
+    <br/>
+      <div
+        *ngIf="employeeForm.get('firstName')?.hasError('pattern') &&
+                employeeForm.get('firstName')?.touched"
+        class="text-danger"
+      >
+        First Name must start with an uppercase letter and contain only alphabets.
+      </div>
+    <br/>
+        </div>
+
+  <!-- Last Name -->
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <br/>
+    <input
+      type="text"
+      class="form-control"
+      id="lastName"
+      formControlName="lastName"
+    />
+                    <div
+                      *ngIf="employeeForm.get('lastName')?.hasError('required') &&
+                              employeeForm.get('lastName')?.touched"
+                      class="text-danger"
+                    >
+                      Last Name is required.
+                    </div>
+                    <div
+                      *ngIf="employeeForm.get('lastName')?.hasError('pattern') &&
+                              employeeForm.get('lastName')?.touched"
+                      class="text-danger"
+                    >
+                      Last Name must start with an uppercase letter and contain only alphabets.
+                    </div>
+  </div>
+  <br/>
+  <!-- Email -->
+  <div class="form-group">
+    <label for="email">Email</label>
+    <br/>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      formControlName="email"
+    />
+                  <div
+                    *ngIf="employeeForm.get('email')?.hasError('required') &&
+                            employeeForm.get('email')?.touched"
+                    class="text-danger"
+                  >
+                    Email is required.
+                  </div>
+                  <div
+                    *ngIf="employeeForm.get('email')?.hasError('pattern') &&
+                            employeeForm.get('email')?.touched"
+                    class="text-danger"
+                  >
+                    Please enter a valid email address.
+                  </div>
+              </div>
+               <br/>
+              <!-- Contact -->
+              <div class="form-group">
+                <label for="contact">Contact</label>
+                <br/>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="contact"
+                  formControlName="contact"
+                />
+                <div
+                  *ngIf="employeeForm.get('contact')?.hasError('required') &&
+                           employeeForm.get('contact')?.touched"
+                  class="text-danger"
+                >
+                  Contact is required.
+                </div>
+                <div
+                  *ngIf="employeeForm.get('contact')?.hasError('pattern') &&
+                           employeeForm.get('contact')?.touched"
+                  class="text-danger"
+                >
+                  Contact must be a 10-digit number.
+                </div>
+              </div>
+              <br/>
+              <!-- Date of Birth -->
+              <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <br/>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="dob"
+                  formControlName="dob"
+                />
+              </div>
+              <br/>
+        
+              <!-- Address -->
+              <div class="form-group">
+                <label for="address">Address</label>
+                <br/>
+                <textarea
+                  class="form-control"
+                  id="address"
+                  rows="1"
+                  formControlName="address"
+                ></textarea>
+              </div>
+              <br/>
+          
+              <button
+                type="submit"
+                class="btn btn-primary " style="width: 100%; background-color:darkcyan; ;"
+                [disabled]="employeeForm.invalid"
+              >
+              <br/>
+                Submit
+              </button>
+            </table>
+          </form>
+          </div>   
+<!----------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="right-section">
+<!-- Content for the right section goes here -------------------------------->
+
+
+      <table>
+        
+          <!-- Add this to your existing HTML file -->
+        <div class="container" >
+            <!-- Your form here -->
+            <aside>
+            <h2 style="color: darkgreen;">Employee Records</h2>
+            
+             <table class="table">
+                    <thead>    
+                                  <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Contact</th>
+                                    <th>DOB</th>
+                                    <th>Address</th>&nbsp;
+                                    <th>Actions</th>
+                                  </tr>
+                    </thead>
+                    <tbody>
+                              <tr *ngFor="let employee of employees">
+                                <td>{{ employee.firstName }}</td>
+                                <td>{{ employee.lastName }}</td>
+                                <td>{{ employee.email }}</td>
+                                <td>{{ employee.contact }}</td>
+                                <td>{{ employee.dob }}</td>
+                                <td>{{ employee.address }}</td>
+                              <td>
+                                  <!-- <button class="btn btn-primary">Edit</button>
+                                  <button class="btn btn-danger">Delete</button> -->
+                                  <td>
+                                            
+                                    <button class="btn btn-primary" (click)="editEmployee(employee)">Edit</button>
+                                    <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">Delete</button>
+                                  </td>
+
+
+
+                              
+                              </tr>
+                    </tbody>
+             </table>
+            </aside>
+            
+        </div>
+        
+        </table>
+          
+        
+        <form>
+            <div>
+              <!-- Add these buttons within the table -->
+              <tbody>
+                <tr *ngFor="let employee of employees">
+                  <!-- Employee details -->
+                  <!-- ... (existing code) ... -->
+              
+                  <!-- Update and Delete buttons -->
+                        <!-- Add this section above your form -->
+                      <div *ngIf="editingEmployee">
+                        <h2></h2>
+                              <form [formGroup]="employeeForm" (ngSubmit)="updateEmployee()">
+                                <!-- ... (form controls) ... -->
+        
+                                          <!-- <div class="form-group">
+                                            <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Save</button>
+                                          </div> -->
+                              </form>
+                      </div>
+                                          
+                </tr>
+              </tbody>
+            </div>
+          </form>
+
+
+<!--------------------------------------------------------------------------->
+    </div>
+  </div>
+
+  
+
+  <!-- <app-employee></app-employee> -->
+</form>

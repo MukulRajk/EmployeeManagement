@@ -1,0 +1,80 @@
+<!-- app.component.html -->
+<!-- app.component.html -->
+
+<!-- Include the EmployeeComponent within the main app component -->
+<!-- <p>EMS  Angular v16</p> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Current Time Zone and Currency</title>
+  <style>
+    #info-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color:aqua;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="info-container">
+    <div id="time-zone"></div>
+    <div id="currency"></div>
+  </div>
+
+  <script  >
+    
+    const timeZoneOffset = new Date().getTimezoneOffset();
+
+    
+    const timeZoneAbbreviation = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+ 
+    const currency = "USD";
+
+    
+    document.getElementById("time-zone").textContent = `Time Zone: ${timeZoneAbbreviation} (Offset: ${timeZoneOffset} minutes)`;
+    document.getElementById("currency").textContent = `Currency: ${currency}`;
+  </script>
+</body>
+</html>
+
+<div style="text-align: left;">
+<a [routerLink]="['employee']">Employee</a> &nbsp;&nbsp;
+
+<a [routerLink]="['login']">Login </a> &nbsp;&nbsp;
+
+<a [routerLink]="['login2']">Login2</a> &nbsp;&nbsp;
+</div>
+<br/>
+<br/>
+
+
+
+
+
+
+
+<div class="container">
+  <h1>Employee Management</h1>
+  <app-employee></app-employee>
+</div>
+
+<div>
+  <app-login></app-login>
+</div>
+<div>
+  <!-- <app-header></app-header> -->
+  <!-- <app-root></app-root> -->
+  <app-welcome></app-welcome>
+</div>
+
+
+<div>
+  <app-login2></app-login2>
+</div>

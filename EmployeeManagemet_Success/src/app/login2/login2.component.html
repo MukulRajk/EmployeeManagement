@@ -1,0 +1,81 @@
+<!-- login2.component.html -->
+<!-- <p>login2 works!</p> -->
+<form>
+<div class="container-fluid pt-3" [formGroup]="login2Form">
+  <!-- validation here -->
+        <div class="alert alert-danger" *ngIf="IsAuthenticationFailed">
+                invalid FirstName or DOB
+            </div>
+       
+       
+     <div class="card">
+      <h5 class="card-header">Login2</h5>
+      <div class="card-body" >
+       <div class="form-group">          
+        <label for="FirstName"> FirstName</label>
+        <!-- <input type="text" class="form-control" name="UserName" /> -->
+        
+        <input type="text" 
+        class="form-control" 
+        name="FirstName" 
+        formControlName="FirstName" 
+        [ngClass]="{'is-valid':login2Form.controls.FirstName.valid, 
+        'is-invalid': login2Form.controls.FirstName.invalid}"  />
+
+        <div class="alert alert-danger"
+         *ngIf="login2Form.get('FirstName').dirty && 
+        login2Form.get('FirstName').hasError('required')">
+                Enter FirstName
+        </div>
+            
+            <div class="alert alert-danger" 
+            *ngIf="login2Form.get('FirstName').dirty &&
+             login2Form.get('FirstName').hasError('minlength')">
+                     minimum 3 characters needed for first name 
+            </div>
+    </div>
+
+
+
+
+
+
+       <div class="form-group">
+        <label for="Dob">DOB</label>
+        <!-- <input type="password" class="form-control" name="Password" />  -->
+        <input type="date" 
+        class="form-control" 
+        name="Dob"
+         formControlName="dob" 
+        [ngClass]="{
+        'is-valid':login2Form.controls.dob.valid, 
+        'is-invalid': login2Form.controls.dob.invalid}"  />
+
+        <div class="alert alert-danger" *ngIf="login2Form.get('dob').dirty && 
+        login2Form.get('dob').hasError('required')">
+                Enter DOB
+        </div>
+            
+            <div class="alert alert-danger" *ngIf="login2Form.get('dob').dirty &&
+             login2Form.get('dob').hasError('minlength')">
+                     minimum 3 characters needed for dob
+
+            </div>
+
+
+
+
+       </div>
+       <input type="button"
+        class="btn btn-success" 
+        value="Login2" 
+       
+       [disabled]="login2Form.invalid" 
+        (click)="login2()"
+       />
+      </div>    
+     </div>
+    </div>
+
+
+</form>

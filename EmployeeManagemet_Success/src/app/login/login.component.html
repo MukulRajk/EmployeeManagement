@@ -1,0 +1,27 @@
+<!-- login.component.html -->
+<!-- login.component.html -->
+
+
+<form (ngSubmit)="login()">
+    <div>
+    <label for="firstName">First Name:</label>
+    <br/>
+    <input type="text" id="firstName" [(ngModel)]="firstName" name="firstName" required>
+    <br/>
+    <br/>
+
+
+    <label for="dob">Date of Birth:</label>
+    <br/>
+    <input type="date" id="dob" [(ngModel)]="dob" name="dob" required>
+   <br/>  
+   <br/>
+   
+  <button type="submit">Login</button>
+
+</div>
+  </form>
+  
+
+
+  

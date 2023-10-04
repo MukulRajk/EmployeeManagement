@@ -1,0 +1,75 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    grid-gap: 10px; /* Optional gap between columns */
+    height: 100vh; /* 100% of the viewport height */
+  }
+  
+  .left-section {
+    /* Styles for the left section */
+    background-color:#ffffff;/* Background color for the left section */
+    padding: 10px; /* Add some padding to the left section */
+    text-align:center; /* Center-align text in the left section */
+  
+  
+  
+  }
+  
+  .right-section {
+    /* Styles for the right section */
+    background-color: #ffffff; /* Background color for the right section */
+    padding: 20px; /* Add some padding to the right section */
+    text-align: center; /* Center-align text in the right section */
+
+
+    /* .table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    .td, .th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+      border-collapse: collapse;
+      width: 100%;
+    } */
+    
+    /* .tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+     */
+    
+   
+    
+  }
+
+  
+  .table{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  .th{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  
+
+  .tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+ 
+  .td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+
+
+  .th, .td {
+    background-color: #96D4D4;
+  }

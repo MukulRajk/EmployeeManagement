@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EMS</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+   
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Current Time Zone and Currency</title>
+    <style>
+      #info-container {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color:aliceblue;
+        color:black;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info-container" >
+      <div id="time-zone"></div>
+      <div id="currency"></div>
+    </div>
+  
+    <script >
+      
+      const timeZoneOffset = new Date().getTimezoneOffset();
+  
+      
+      const timeZoneAbbreviation = "IST"/* Intl.DateTimeFormat().resolvedOptions().timeZone */;
+  
+   
+      const currency = "INR";
+  
+      
+      document.getElementById("time-zone").textContent = ` Current TimeZone : ${timeZoneAbbreviation} `;
+      document.getElementById("currency").textContent = `Currency: ${currency}`;
+    </script>
+  </body>
+  </html>
+
+
+
+
+
+
+  <app-root></app-root>
+</body>
+</html>
